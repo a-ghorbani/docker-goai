@@ -19,6 +19,9 @@ RUN /bin/bash -c "source activate pycudf_notebook_py35 && \
 # Add jaydebeapi
 RUN /bin/bash -c "source activate pycudf_notebook_py35 &&  pip install jaydebeapi"
 
+# Add some samples
+RUN cd ~/notebooks/ && git clone https://github.com/a-ghorbani/goai_samples.git
+
 EXPOSE 9090 9091 9092 9093
 EXPOSE 8888
 
