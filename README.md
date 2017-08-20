@@ -43,7 +43,7 @@ docker run -it --rm \
     -p 8888:8888 \
     -p 9092:9092 \
     -v /PATH/TO/LOCAL/NB-DIR/:/home/appuser/notebooks/mein/ \
-    -v /PATH/TO/LOCAL/DATA-DIR/:/home/appuser/notebooks/mein/ \
+    -v /PATH/TO/LOCAL/DATA-DIR/:/opt/mapd/data/ \
     aghorbani/goai [--load-data] [--jupyter-args=<arguments for jupyter>]
 ```
 
