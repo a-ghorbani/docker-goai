@@ -6,7 +6,7 @@ ARG XGBOOST_COMMIT="332b26d"
 
 # Add xgboost 
 RUN git clone --recursive https://github.com/dmlc/xgboost.git && cd xgboost && git checkout $XGBOOST_COMMIT && \
-    make -j PLUGIN_UPDATER_GPU=ON && \
+    make PLUGIN_UPDATER_GPU=ON && \
     cd python-package && \
     /bin/bash -c "source activate pycudf_notebook_py35 && python setup.py install" && \
     cd ~ && rm -rf xgboost
